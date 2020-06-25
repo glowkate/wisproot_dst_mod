@@ -2986,7 +2986,7 @@ return {
 
     DESCRIBE_GENERIC = "What is it?",
     DESCRIBE_TOODARK = "Nnn...too dark.",
-    DESCRIBE_SMOLDERING = "It's smodering!",
+    DESCRIBE_SMOLDERING = "It's smoldering!",
     EAT_FOOD =
     {
         TALLBIRDEGG_CRACKED = "Uck...gross.",

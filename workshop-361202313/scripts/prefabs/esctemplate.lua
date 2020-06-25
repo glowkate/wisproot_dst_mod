@@ -8,10 +8,10 @@ local prefabs = {}
 
 -- Custom starting inventory
 local start_inv = {
-	"flint",
-	"flint",
-	"twigs",
-	"twigs",
+	"nightmarefuel",
+	"nightmarefuel",
+	"nightmarefuel",
+	"nightmarefuel",
 }
 
 -- When the character is revived from human
@@ -47,22 +47,25 @@ end
 -- This initializes for the server only. Components are added here.
 local master_postinit = function(inst)
 	-- choose which sounds this character will play
-	inst.soundsname = "willow"
-	
+	inst.soundsname = "webber"
+
 	-- Uncomment if "wathgrithr"(Wigfrid) or "webber" voice is used
-    --inst.talker_path_override = "dontstarve_DLC001/characters/"
+    inst.talker_path_override = "dontstarve_DLC001/characters/"
 	
 	-- Stats	
 	inst.components.health:SetMaxHealth(150)
 	inst.components.hunger:SetMax(150)
 	inst.components.sanity:SetMax(200)
-	
-	-- Damage multiplier (optional)
-    inst.components.combat.damagemultiplier = 1
+
+	inst.components.sanity.night_drain_mult = 0.5 * TUNING.WILSON_SANITY_MULT
+    inst.components.sanity.neg_aura_mult = 0.75 * TUNING.WILSON_SANITY_MULT
 	
 	-- Hunger rate (optional)
-	inst.components.hunger.hungerrate = 1 * TUNING.WILSON_HUNGER_RATE
-	
+	inst.components.hunger.hungerrate = TUNING.WILSON_HUNGER_RATE
+
+	inst.components.foodaffinity:AddPrefabAffinity("carrot", TUNING.AFFINITY_15_CALORIES_SMALL)
+	inst.components.foodaffinity:AddPrefabAffinity("carrot_cooked", TUNING.AFFINITY_15_CALORIES_SMALL)
+
 	inst.OnLoad = onload
     inst.OnNewSpawn = onload
 	
