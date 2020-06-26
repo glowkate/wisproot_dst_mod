@@ -323,8 +323,7 @@ return {
 	ANNOUNCE_FAN_OUT = "No! Come back!",
     ANNOUNCE_COMPASS_OUT = "Nothing lasts forever.",
 	ANNOUNCE_TRAP_WENT_OFF = "Ach!",
-	ANNOUNCE_UNIMPLEMENTED = "I don't know what I was thinking, leaving my child behind.\n
-                            Now I suffer the curse, knowing now I am blind.",
+	ANNOUNCE_UNIMPLEMENTED = "I don't know what I was thinking, leaving my child behind.\nNow I suffer the curse, knowing now I am blind.",
 	ANNOUNCE_WORMHOLE = "Bleeh, always gross.",
 	ANNOUNCE_TOWNPORTALTELEPORT = "Woo! Sand magic!",
 	ANNOUNCE_CANFIX = "\nI can fix!",
